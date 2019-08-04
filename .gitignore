@@ -2,3 +2,6 @@ hsperfdata_jboss/
 *.crt
 standalone.xml
 *.jks
+.env
+*.o
+node_modules
