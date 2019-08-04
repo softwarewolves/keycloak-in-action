@@ -24,9 +24,9 @@ The shell in which `make run` executes remains attached to both the Keycloak and
 
 When the Keycloak server has started up, its UI is available at `https://localhost:8443`. You can log into the management console with `admin:admin` if you click through the warning about an invalid certificate - in this demo configuration, each Keycloak container generates a new key pair and a self-signed certificate.
 
-The Angular app is based on a sample application in IdentityModel's [oidc-client-js library](https://github.com/IdentityModel/oidc-client-js). When it has started up, it is available at `http://localhost:4200`. This client has been registered in Keycloak with the identifier `spa`. The Angular client starts an OIDC authorization code flow with the running Keycloak instance as the authorization server when the `login` button is pressed. This will fail, unless you previously accepted the invalid Keycloak certificate, see above, as the authorization request cannot be sent.
+The Angular app is based on a sample application in IdentityModel's [oidc-client-js library](https://github.com/IdentityModel/oidc-client-js). When it has started up, it is available at `http://localhost:4200`. This client has been registered in Keycloak with the identifier `spa`. The Angular client starts an OIDC authorization code flow with the running Keycloak instance as the authorization server when the `login` button is pressed. This will fail, unless you previously accepted the invalid Keycloak certificate, see above, as the client cannot retrieve the OpenID Provider's configuration over HTTPS.
 
-Keycloak has been configured to act as a broker for an Identity Provider. For this to work, the following environment variables need to be set in a .env file in the root directory of the project:
+Keycloak has been configured to act as a broker for an Identity Provider. For this to work, the following environment variables need to be set in a `.env` file in the root directory of the project:
 * `USER_INFO_URL`
 * `CLIENT_ID`
 * `CLIENT_SECRET`
