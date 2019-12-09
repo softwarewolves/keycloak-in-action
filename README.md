@@ -15,6 +15,9 @@ This repo offers a very thin layer over a vanilla Keycloak Docker image to demon
 ```
 git clone git@github.com:softwarewolves/keycloak-in-action.git
 cd keycloak-in-action
+```
+Place the environment variables as described below in a `.env` file in the root directory of the repo.
+```
 make run
 ```
 
