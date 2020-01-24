@@ -21,7 +21,7 @@ Place the environment variables as described below in a `.env` file in the root 
 make run
 ```
 
-The last command brings up both a Keycloak docker container and an Angular development server. This takes a long time as a new Docker image is built each time - this can be avoided on subsequent runs by removing the build dependency of the `run` make target. Unfortunately, the first time `make run` is executed, this inevitably takes a long time as the Docker image needs to be downloaded and all the Angular application's dependencies installed.
+The last command brings up both a Keycloak docker container and an Angular development server. This takes a long time as a new Docker image is built each time - this can be avoided on subsequent runs by removing the build dependency of the `run` make target.
 
 The shell in which `make run` executes remains attached to both the Keycloak and the Angular dev server's stdout and stdin, so you see them starting up and throwing exceptions if something goes wrong. The servers can be stopped by sending an interrupt signal (Ctrl + C in the shell).
 
